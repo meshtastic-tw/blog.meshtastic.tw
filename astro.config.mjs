@@ -10,7 +10,8 @@ import { manifest } from './src/utils/manifest';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blog.meshtastic.tw/',
+  site: 'https://blog.meshtastic.tw',
+  base: 'my-repo',
   image: {
     remotePatterns: [{ protocol: 'https' }],
   },
