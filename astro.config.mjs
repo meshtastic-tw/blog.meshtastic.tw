@@ -5,6 +5,7 @@ import compressor from "astro-compressor";
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import { VitePWA } from 'vite-plugin-pwa';
+import cloudflare from '@astrojs/cloudflare';
 
 import { manifest } from './src/utils/manifest';
 
@@ -48,4 +49,6 @@ export default defineConfig({
       }),
     ],
   },
+  output: 'server',
+  adapter: cloudflare(),
 });
