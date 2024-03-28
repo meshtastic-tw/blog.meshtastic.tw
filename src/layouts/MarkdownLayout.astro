@@ -1,0 +1,10 @@
+---
+import Base from '@layouts/Base.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Base meta_title={frontmatter.title} description={frontmatter.description}>
+  <div class="prose-md prose prose-green min-w-full md:prose-lg">
+    <slot />
+  </div>
+</Base>
